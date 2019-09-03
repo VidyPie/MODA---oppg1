@@ -1,3 +1,40 @@
 body {
-  background-color: lightblue;
+  	margin: 0;
+  	padding: 0;
+}
+
+.header {
+	height: 50px;
+	width: 100%; //fallback
+   	width: 100vw;
+   	position: fixed;
+   	border-bottom: 1px solid #ddd;
+   	display: inline-block;
+}
+
+.navbar {
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+.logo {
+	height: 30px;
+	margin-top: 10px;
+}
+
+.mybtn {
+	height: 47px;
+	float: right;
+	padding-right: 20px;
+	padding-left: 20pX;
+}
+
+.mybtn p {
+	padding-top: 6px;
+	color: #474445;
+	font: 12px Arial, Helvetica, sans-serif;
+}
+
+.mybtn:hover {
+	border-bottom: 3px solid #06befb;
 }
