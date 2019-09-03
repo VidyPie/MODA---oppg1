@@ -2,25 +2,25 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-
-  <title>FANTNO</title>
-  <meta name="description" content="FANTNO">
-  <meta name="VidyPie" content="Advertisement">
-
-  <link rel="stylesheet" href="styles.css">
-
+    <meta charset="utf-8">
+    <title>FANTNO</title>
+    <meta name="description" content="FANTNO">
+    <meta name="VidyPie" content="Advertisement">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
   <script src="script.js"></script>
-  <div class="header">
-  	<div class="navbar">
-  		<img src="resources/logo.png" class="logo">
-  		<div class="mybtn">
-  			<p>Logg inn</p>
-  		</div>
-  	</div>
-  </div>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <div class="header">
+  	    <div class="navbar">
+  		    <img src="resources/logo.png" class="logo">
+  		    <div class="mybtn noselect" onclick="loadAdverts()">
+  			    <p>Logg inn</p>
+  		    </div>
+  	    </div>
+    </div>
+    <div id="content">
+    </div>
 </body>
 </html>
