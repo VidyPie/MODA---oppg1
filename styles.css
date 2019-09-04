@@ -23,8 +23,10 @@ body {
 }
 
 .navbar {
-	margin-left: 25%;
-	margin-right: 25%;
+	//margin-left: 25%;
+	//margin-right: 25%;
+	margin-left: 20px;
+    margin-right: 20px;
 }
 
 .logo {
@@ -77,6 +79,37 @@ body {
     height: 104px;
 }
 
+.userBox {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    top: 50%;
+    left: 50%;
+    margin: -97px 0 0 -82px;
+    width: 194px;
+    height: 164px;
+}
+
 .loginBox input {
     margin: 10px 10px 0 10px;
 }
+
+.userBox input {
+    margin: 10px 10px 0 10px;
+}
+
+.errortxt {
+    color: red;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#logoutBtn {
+    display: none;
+    width: 50px;
+}
+
+#newBtn {
+    display: none;
+}
+

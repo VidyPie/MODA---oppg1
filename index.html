@@ -15,11 +15,20 @@
     <div class="header">
   	    <div class="navbar">
   		    <img src="resources/logo.png" class="logo">
-  		    <div class="mybtn noselect" onclick="openLogin()">
+  		    <div id="logoutBtn" class="mybtn noselect" onclick="logout()">
+  			    <p>Logg ut</p>
+  		    </div>
+  		    <div id="loginBtn" class="mybtn noselect" onclick="openLogin()">
   			    <p>Logg inn</p>
+  		    </div>
+  		    <div id="newBtn" class="mybtn noselect" onclick="newAdvert()">
+  			    <p>Opprett annonse</p>
   		    </div>
   		    <div class="mybtn noselect" onclick="loadAdverts()">
   			    <p>Test</p>
+  		    </div>
+  		    <div id="userBtn" class="mybtn noselect" onclick="newUser()">
+  			    <p>Opprett bruker</p>
   		    </div>
   	    </div>
     </div>
