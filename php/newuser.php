@@ -17,14 +17,14 @@ if ($result = $conn->query($q)) {
         $row_array['dupUser'] = true;
         array_push($return_arr,$row_array);
         echo json_encode($return_arr);
-		$exit = true;
-		
+        $exit = true;
+        
     }
     $result->close();
 }
 
 if ($exit){
-	exit();
+    exit();
 }
 
 $q2 = "insert into FANTUSERS(USERNAME, PASSWORD) values ('" . $_GET["username"] . "', '" . $_GET["password"] . "')";

@@ -16,6 +16,9 @@ if ($result = $conn->query($q)) {
     $return_arr = array();
     while($row = $result->fetch_array()) {
         $row_array['TITLE'] = $row['TITLE'];
+        $row_array['TEXT'] = $row['TEXT'];
+        $row_array['IMAGE'] = $row['IMAGE'];
+        $row_array['USERNAME'] = $row['USERNAME'];
         array_push($return_arr,$row_array);
     }
     echo json_encode($return_arr);

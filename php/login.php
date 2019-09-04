@@ -13,10 +13,12 @@ if (!$conn) {
 if ($result = $conn->query($q)) {
     $return_arr = array();
     while($row = $result->fetch_array()) {
-        $row_array['VALID'] = true;
+        $row_array['valid'] = true;
+        $row_array['username'] = $_GET["username"];
         array_push($return_arr,$row_array);
     }
     echo json_encode($return_arr);
     $result->close();
 }
+    
 ?>
