@@ -57,6 +57,8 @@ function openLogin() {
 }
 
 function tryLogin(data) {
+    removeErrorMsg($('.loginBox')[0]);
+    removeValidMsg($('.loginBox')[0]);
     xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -179,7 +181,9 @@ function tryNewUser(data) {
 }
 
 function newValidUser() {
-    
+    $('.userBox').remove();
+    openLogin();
+    validMsg($('.loginBox')[0], 'Vellykket oppretting av bruker. Du kan nå logge inn.');
 }
 
 function errorMsg(box, msg) {
@@ -199,5 +203,25 @@ function removeErrorMsg(box) {
     if (error) {
         $(box).css({'height': $(box).height() - $(error).height() - 20}); 
         $(error).remove();
+    }
+}
+
+function validMsg(box, msg) {
+    var info = $(box).find('.infotxt')[0];
+    if (info) {
+        return;
+    }
+    var p = document.createElement('p');
+    p.className = 'infotxt';
+    p.textContent = msg;
+    box.appendChild(p);
+    $(box).css({'height': $(box).height() + $(p).height() + 20});
+}
+
+function removeValidMsg(box) {
+    var info = $(box).find('.infotxt')[0];
+    if (info) {
+        $(box).css({'height': $(box).height() - $(info).height() - 20}); 
+        $(info).remove();
     }
 }

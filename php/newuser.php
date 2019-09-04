@@ -10,20 +10,26 @@ if (!$conn) {
 }
 
 $exit = false;
+$return_arr = array();
 $q = "select 1 from FANTUSERS where USERNAME='" . $_GET["username"] . "'";
 if ($result = $conn->query($q)) {
-    $return_arr = array();
     while($row = $result->fetch_array()) {
         $row_array['dupUser'] = true;
         array_push($return_arr,$row_array);
+        echo json_encode($return_arr);
 		$exit = true;
+		
     }
-    echo json_encode($return_arr);
     $result->close();
 }
 
 if ($exit){
 	exit();
 }
-echo "error";
+
+$q2 = "insert into FANTUSERS(USERNAME, PASSWORD) values ('" . $_GET["username"] . "', '" . $_GET["password"] . "')";
+$conn->query($q2);
+$row_array['valid'] = true;
+array_push($return_arr,$row_array);
+echo json_encode($return_arr);
 ?>

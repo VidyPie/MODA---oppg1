@@ -104,6 +104,12 @@ body {
     margin-right: 10px;
 }
 
+.infotxt {
+    color: #06befb;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 #logoutBtn {
     display: none;
     width: 50px;
